@@ -1,0 +1,21 @@
+.container{
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 24px 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    
+    /* Text/primary */
+    color: #1B1F23;
+}

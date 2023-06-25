@@ -1,0 +1,24 @@
+.container{
+    background-color: white;
+    padding: 24px;
+    margin: 24px 32px 0px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.control_panel{
+    margin-left: auto;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.reset{
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items:center;
+
+    box-sizing: border-box;
+
+}
+
+.button{
+    width: 20px;
+    height: 20px;
+
+    border-radius: 4px;
+    padding: 4px;
+    text-align: center;
+    user-select: none;
+}
+
+.digit{
+    font-family: 'Libre Franklin', sans-serif;    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+
+    /* Text/primary */
+    color: #1B1F23;
+}
+
+.active{
+    background: #FF5500;
+    cursor: pointer;
+}
+
+.disabled{
+    background: #FFA375;
+}
