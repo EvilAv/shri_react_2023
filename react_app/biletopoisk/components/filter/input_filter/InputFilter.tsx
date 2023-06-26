@@ -13,7 +13,7 @@ export const InputFilter: FunctionComponent<Props> = ({inputHandler}) => {
     }
 
     return (
-        <form onSubmit={(event) => event.preventDefault()}>
+        <form onSubmit={(event) => event.preventDefault()} className={style.container}>
             <label htmlFor="input" className={style.filter_name}>Название</label>
             <input type="text" id="input" className={style.input} placeholder="Введите название" onChange={inputHandler}/>
         </form>
