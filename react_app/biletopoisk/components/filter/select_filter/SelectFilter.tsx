@@ -48,9 +48,9 @@ export const SelectFilter: FunctionComponent<Props> = ({children, title, onSubmi
       }, [ isActive ]);
 
     return (
-        <>
+        <div className={style.container}>
             <div className={style.filter_name}>{title}</div>
-            <div onClick={(event) => event.stopPropagation()}>
+            <div className={style.container} onClick={(event) => event.stopPropagation()}>
                 <div className={`${style.placeholder} ${style[placeholderState]}`} onClick={() => setActive(!isActive)}>
                     <div>{titletext}</div>
                     <ArrowIcon height="20" width="20" color="#999FA6" isRoate={isActive}/>
@@ -64,6 +64,6 @@ export const SelectFilter: FunctionComponent<Props> = ({children, title, onSubmi
                     </SelectContext.Provider>
                 </div>}
             </div>
-        </>
+        </div>
     )
 }

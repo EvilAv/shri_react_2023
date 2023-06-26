@@ -23,7 +23,8 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
         <StoreProvider>
           <CustomHeader />
-          <div id='root'>{children}</div>
+          <div id='root'></div>
+          {children}
           </StoreProvider>
         <CustomFooter />
       </body>

@@ -15,7 +15,7 @@
     outline: none;
 
     border-radius: 8px;
-    width: 360px;
+    width: 100%;
 
     box-sizing: border-box;
 
@@ -77,6 +77,6 @@
     cursor: pointer;
 }
 
-.continaer{
+.container{
     width: 100%;
 }
