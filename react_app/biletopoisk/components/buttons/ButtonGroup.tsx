@@ -13,7 +13,7 @@ import { ticketsActions } from "../../redux/features/tickets";
 import { useDispatch, useSelector } from "react-redux";
 
 interface modalProp {
-    openModal: () => void,
+    openModal: (id:string) => void,
 }
 
 export const ButtonGroup: FunctionComponent<{id: string, onDelete?: modalProp}> = ({id, onDelete}) => {
@@ -34,7 +34,7 @@ export const ButtonGroup: FunctionComponent<{id: string, onDelete?: modalProp}> 
 
     return (
         <div className={style.container}>
-            <div className={`${style.button} ${style[minusState]}`} onClick={modalOpen ? () => onDelete?.openModal(): () => dispatch(ticketsActions.decrement(id))}><MinusIcon /></div>
+            <div className={`${style.button} ${style[minusState]}`} onClick={modalOpen ? () => onDelete?.openModal(id): () => dispatch(ticketsActions.decrement(id))}><MinusIcon /></div>
             <div>{count}</div>
             <div className={`${style.button} ${style[plusState]}`} onClick={() => dispatch(ticketsActions.increment(id))}><PlusIcon /></div>
         </div>

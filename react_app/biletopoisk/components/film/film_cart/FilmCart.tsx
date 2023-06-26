@@ -22,8 +22,13 @@ interface smth {
 export const FilmCart: FunctionComponent<{films : any}> = ({films}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalId, setModalId] = useState('');
 
     const closeModal = () => setIsModalOpen(false);
+    const openModal = (id:string) => {
+        setIsModalOpen(true),
+        setModalId(id);
+    }
     const root = document.querySelector('#root');
 
     return (
@@ -31,12 +36,12 @@ export const FilmCart: FunctionComponent<{films : any}> = ({films}) => {
         {films.map((film: FilmItem) => {
             return  (
                 <div className={style.container} key={film.id}>
-                    {isModalOpen && root && createPortal(<Modal onClose={closeModal} id={film.id}/>, root)}
+                    {isModalOpen && root && modalId && createPortal(<Modal onClose={closeModal} id={modalId}/>, root)}
                     <FilmInfo id={film.id} genre={film.genre} 
                     title={film.title} posterUrl={film.posterUrl} />
                     <div className={style.control_panel}>
-                        <ButtonGroup id={film.id} onDelete={{openModal: () => setIsModalOpen(true)}}/>
-                        <span className={style.reset} onClick={() => setIsModalOpen(true)}><CloseIcon height="20" width="20"/></span>
+                        <ButtonGroup id={film.id} onDelete={{openModal}}/>
+                        <span className={style.reset} onClick={() => openModal(film.id)}><CloseIcon height="20" width="20"/></span>
                     </div>
                 </div>
             )

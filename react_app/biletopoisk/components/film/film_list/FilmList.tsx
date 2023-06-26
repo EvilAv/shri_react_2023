@@ -2,23 +2,20 @@
 
 import { FunctionComponent, Key } from "react";
 
-import style from "./cartstyle.module.css"
+import style from "./liststyle.module.css"
 import { FilmInfo } from "../film_info/FilmInfo";
 import { ButtonGroup } from "../../buttons/ButtonGroup";
-import { CloseIcon } from "../../icons/CloseIcon";
-
-import { ticketsActions } from "../../../redux/features/tickets";
 
 import { useDispatch } from "react-redux";
 
 interface FilmItem  {id: string; genre: string; title: string; posterUrl: string; }
 
-export const FilmCart2: FunctionComponent<{films : any}> = ({films}) => {
+export const FilmList: FunctionComponent<{films : any}> = ({films}) => {
 
     const dispatch = useDispatch();
 
     return (
-        <>
+        <div className={style.wrapper}>
         {films.map((film: FilmItem) => {
             return  (
                 <div className={style.container} key={film.id}>
@@ -31,6 +28,6 @@ export const FilmCart2: FunctionComponent<{films : any}> = ({films}) => {
                 </div>
             )
         })}
-        </>
+        </div>
     )
 }

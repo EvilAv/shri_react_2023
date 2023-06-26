@@ -1,0 +1,40 @@
+.filter_name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* Text/primary */
+    color: #1B1F23;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.input{
+    background: #FFFFFF;
+    outline: none;
+
+    border: 1px solid #E1E3E6;
+    border-radius: 8px;
+    width: 360px;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 16px;
+
+    /* Text/tertiary */
+    color: #999FA6;
+}
+
+.input:focus{
+    /* Text/primary */
+    color: #1B1F23;
+
+    border: 1px solid #FF5500;
+}
